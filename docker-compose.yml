@@ -6,7 +6,7 @@ services:
     privileged: true
     container_name: dind
     expose:
-      - 2375
+      - 2376
     networks:
       - jenkins_dind
     environment:
@@ -25,7 +25,7 @@ services:
       - ./jenkins:/var/jenkins_home
       - /usr/bin/docker:/usr/bin/docker
     environment:
-      DOCKER_HOST: "tcp://dind:2375"
+      DOCKER_HOST: "tcp://dind:2376"
     networks:
       - jenkins_dind
 
